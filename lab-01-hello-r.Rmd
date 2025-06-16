@@ -23,10 +23,6 @@ The datasaurus_dozen file has 1846 rows and 3 columns. The variables included in
 
 ### Exercise 2
 
-The answers for this exercise are already provided to help guide you. Clean up the narrative to reflect what you want to submit. Let’s break it into steps:
-
-First, let's plot the data in the dino dataset:
-
 ```{r plot-dino, fig.height=3, fig.width=6}
 dino_data <- datasaurus_dozen %>%
   filter(dataset == "dino")

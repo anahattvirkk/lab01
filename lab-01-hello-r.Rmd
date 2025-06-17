@@ -31,14 +31,13 @@ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
 
-Next, let's calculate the correlation between `x` and `y` in this dataset:
+Correlation between `x` and `y` in this dataset:
 
 ```{r cor-dino}
 dino_data %>%
   summarize(r = cor(x, y))
 ```
-Once you’ve cleaned up the text, add your own explanation or observations here!
-
+The correlation between x and y is approximately -0.06, suggesting that there is no linear relationship present between the two variables. However, when visualizing the data we are able to see a clear dinosaur shape, which emphasizes the importance of visualizing the data instead of solely relying on the statistics. 
 
 ### Exercise 3
 

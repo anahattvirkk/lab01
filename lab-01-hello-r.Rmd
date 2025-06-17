@@ -47,6 +47,11 @@ Note that the R chunks are labeled with `plot-star` and `cor-star` to provide sp
 To finish, clean up the narrative by removing these instructions.
 
 ```{r plot-star}
+star_data <- datasaurus_dozen %>%
+  filter(dataset == "star")
+
+ggplot(data = star_data, mapping = aes(x=x, y = y)) +
+  geom_point()
 
 ```
 

@@ -37,14 +37,9 @@ Correlation between `x` and `y` in this dataset:
 dino_data %>%
   summarize(r = cor(x, y))
 ```
-The correlation between x and y is approximately -0.06, suggesting that there is no linear relationship present between the two variables. However, when visualizing the data we are able to see a clear dinosaur shape, which emphasizes the importance of visualizing the data instead of solely relying on the statistics. 
+The correlation between x and y is approximately -0.065, suggesting that there is no linear relationship present between the two variables. However, when visualizing the data we are able to see a clear dinosaur shape, which emphasizes the importance of visualizing the data instead of solely relying on the statistics. 
 
 ### Exercise 3
-
-This is your turn to write the code and narrative for the star dataset. Follow the same steps as above to complete the analysis. Don't forget to label your chunks appropriately!
-
-Note that the R chunks are labeled with `plot-star` and `cor-star` to provide spaces to place the code for plotting and calculating the correlation coefficient.
-To finish, clean up the narrative by removing these instructions.
 
 ```{r plot-star}
 star_data <- datasaurus_dozen %>%
@@ -55,13 +50,13 @@ ggplot(data = star_data, mapping = aes(x=x, y = y)) +
 
 ```
 
-I'm some filler text, you should replace me with more meaningful text...
+Correlation between `x` and `y` in this dataset:
 
 ```{r cor-star}
-
+star_data %>%
+  summarize(r = cor(x,y))
 ```
-Add your explanation here—what did you notice?
-
+The correlation between x and y in the star dataset is about -0.063, suggesting that there is no meaningful linear relationship between the x and y coordinates. Similar to Exercise 2, when plotting the data we see a clear star shape plotted, once again demonstrating that relying on summary statistics in isolation can be misleading. 
 
 ### Exercise 4
 

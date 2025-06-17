@@ -1,7 +1,7 @@
 ---
 title: "Lab 01 - Hello R"
 author: "Anahatt Virk"
-date: "6/16/2025"
+date: "6/17/2025"
 output: 
   html_document: 
     fig_height: 4
@@ -56,25 +56,43 @@ Correlation between `x` and `y` in this dataset:
 star_data %>%
   summarize(r = cor(x,y))
 ```
+
 The correlation between x and y in the star dataset is about -0.063, suggesting that there is no meaningful linear relationship between the x and y coordinates. Similar to Exercise 2, when plotting the data we see a clear star shape plotted, once again demonstrating that relying on summary statistics in isolation can be misleading. 
 
 ### Exercise 4
 
-Add your code and narrative to complete this exercise. Use the conventions from the previous exercises to name your chunks and organize your work.
+```{r plot-circle}
+circle_data <- datasaurus_dozen %>%
+  filter(dataset == "circle")
 
-```{r}
-
+ggplot(data = circle_data, mapping = aes(x=x, y = y)) +
+  geom_point()
 ```
 
-```{r}
+Correlation between `x` and `y` in this dataset:
 
+```{r cor-circle}
+circle_data %>%
+  summarize(r = cor(x,y))
 ```
+
+The correlation between x and y for the circle dataset is -0.068, once again highlighting the importance of data visualization to uncover patterns that statistics alone might miss. 
 
 ### Exercise 5
 
-This is your final exercise! Add code and narrative as needed. Be creative and show off what you’ve learned so far.
-Add code and narrative as needed.
+```{r plot-bullseye}
+bullseye_data <- datasaurus_dozen %>%
+  filter(dataset == "bullseye")
 
-To add additional R chunks, you can either type the backticks, curly braces, and the letter `r`, or use the "Insert Chunk" button above (the green C+ icon). Have fun!
+ggplot(data = bullseye_data, mapping = aes(x=x, y = y)) +
+  geom_point()
+```
 
+Correlation between `x` and `y` in this dataset:
 
+```{r cor-bullseye}
+bullseye_data %>%
+  summarize(r = cor(x,y))
+```
+
+With a correlation coefficient of about -0.069, the bullseye dataset also demonstrates the significance of using both statistics and data visualization hand in hand to uncover patterns in the data. 
